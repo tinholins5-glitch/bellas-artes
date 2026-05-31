@@ -9,6 +9,8 @@ ehthumbs.db
 # Logs
 *.log
 
-# Arquivos temporários
+# Arquivos temporï¿½rios
 *.tmp
 *.temp
+# Ignorar cÃ³pias locais ou pastas de backup
+Bellas's Artes/
