@@ -101,7 +101,7 @@
     <header>
       <nav>
         <a class="brand" href="#top">
-          <img class="brand-logo" src="./WhatsApp Image 2026-05-28 at 09.44.40.jpeg" alt="Logo Bellas's Artes" />
+          <img class="brand-logo" src="./WhatsApp Image 2026-05-31 at 11.32.09.jpeg" alt="Logo Bellas's Artes" />
           <span>Bellas's Artes</span>
         </a>
         <div class="nav-links">
@@ -247,7 +247,7 @@
 
       const text = encodeURIComponent(messageLines.join('\n'));
       const whatsappUrl = `https://wa.me/${storePhone}?text=${text}`;
-      window.open(whatsappUrl, '_blank');
+      window.location.href = whatsappUrl;
     });
 
     updateCart();

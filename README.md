@@ -23,5 +23,8 @@ O site está configurado para funcionar com GitHub Pages a partir do arquivo `in
 ### Deploy automático
 Você também pode usar o script `deploy.ps1` na raiz do projeto para rodar os comandos Git automaticamente.
 
+### Executar localmente
+Se o Git não estiver no PATH do PowerShell, execute `push-git.cmd` na raiz do projeto para publicar o site no GitHub.
+
 ### Deploy automático com GitHub Actions
 Se você já tiver o repositório configurado, o workflow em `.github/workflows/pages.yml` fará o deploy automático sempre que houver push para `main` ou `master`.
