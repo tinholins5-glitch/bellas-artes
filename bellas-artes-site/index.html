@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bellas's Artes | Papelaria criativa e afetiva</title>
+  <meta name="description" content="Bellas's Artes é uma papelaria criativa e afetiva com cadernos, adesivos, caixas, topos de bolos personalizados e itens de festa." />
+  <style>
+    :root {
+      --pink: #ffd6e8;
+      --pink-strong: #efb6d0;
+      --peach: #fff1c9;
+      --mint: #dff7ef;
+      --lavender: #efe4ff;
+      --ink: #3f2940;
+      --cream: #fffafc;
+      --card: rgba(255, 255, 255, 0.92);
+      --shadow: 0 18px 35px rgba(74, 46, 63, 0.14);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Comic Sans MS", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, #fff 0 8%, transparent 8%),
+        radial-gradient(circle at top right, #fff4d8 0 10%, transparent 10%),
+        linear-gradient(135deg, #fffafc 0%, #fff 35%, #fff1f6 55%, #f1fff9 100%);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    .page-shell { min-height: 100vh; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 250, 252, 0.82);
+      border-bottom: 1px solid rgba(239, 182, 208, 0.25);
+    }
+    nav {
+      max-width: 1160px; margin: 0 auto; padding: 16px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 1.18rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+    .brand-logo { width: 62px; height: 62px; object-fit: cover; border-radius: 50%; border: 2px solid rgba(255,255,255,0.95); box-shadow: 0 10px 24px rgba(58,36,48,0.18), 0 0 0 4px rgba(217,140,168,0.18); background: #fff; flex-shrink: 0; }
+    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.98rem; }
+    main { max-width: 1160px; margin: 0 auto; padding: 24px 20px 60px; }
+    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center; padding: 18px 0 32px; }
+    .eyebrow { display: inline-block; padding: 8px 12px; border-radius: 999px; background: linear-gradient(135deg, #fff4d8, #ffd6e8); color: #7a4357; font-size: 0.92rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; box-shadow: var(--shadow); }
+    h1 { font-size: clamp(2.6rem, 8vw, 4.8rem); line-height: 1.05; margin: 14px 0 12px; color: #2d1823; font-family: "Comic Sans MS", "Trebuchet MS", sans-serif; text-wrap: balance; }
+    .lead { font-size: 1.1rem; color: #5b4651; max-width: 560px; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 12px 16px; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease; box-shadow: var(--shadow); border: 1px solid transparent; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(135deg, #f4cbe1, #ffd6b8); color: #4a3142; }
+    .btn-secondary { background: linear-gradient(135deg, #ffffff, #f2fff9); border-color: #e4d6df; color: var(--ink); }
+    .hero-card { background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(255,244,250,0.95)); border: 1px solid rgba(239, 182, 208, 0.35); border-radius: 28px; padding: 18px; box-shadow: var(--shadow); }
+    .mini-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 999px; background: linear-gradient(135deg, #fff, #fff7da); border: 1px solid #f2d9e7; font-size: 0.95rem; color: #694a58; box-shadow: 0 8px 18px rgba(74, 46, 63, 0.08); }
+    .feature-grid, .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,247,250,0.96)); border: 1px solid rgba(239, 182, 208, 0.32); border-radius: 24px; padding: 18px; box-shadow: var(--shadow); }
+    .card h2, .card h3 { margin-top: 0; font-size: 1.12rem; }
+    .card p { color: #5d4b58; font-size: 0.98rem; margin-bottom: 0; }
+    .highlight { color: #8e4867; font-weight: 700; }
+    .section { margin-top: 26px; padding: 18px 0 6px; }
+    .section-header { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+    .section-header h2 { font-size: clamp(1.35rem, 3vw, 1.9rem); margin: 0; }
+    .section-header p { margin: 4px 0 0; color: #5d4b58; }
+    .product-card { background: linear-gradient(180deg, #fff, #fff9fc); border: 1px solid #efdbe5; border-radius: 24px; padding: 16px; box-shadow: var(--shadow); }
+    .emoji { font-size: 1.5rem; display: inline-block; margin-bottom: 6px; }
+    .shop-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 18px; }
+    .shop-card { background: linear-gradient(180deg, #fff, #fff7f9); border: 1px solid rgba(239, 182, 208, 0.5); border-radius: 24px; padding: 18px; box-shadow: var(--shadow); display: grid; gap: 12px; }
+    .shop-card h3 { margin: 0; font-size: 1.1rem; }
+    .shop-card p { margin: 0; color: #5d4b58; }
+    .qty-group { display: flex; align-items: center; gap: 10px; }
+    .qty-group input { width: 58px; border: 1px solid #e8d3de; border-radius: 14px; padding: 10px 12px; text-align: center; font-size: 1rem; color: var(--ink); background: #fff; }
+    .qty-group button { border: none; background: #ffd6e8; color: var(--ink); border-radius: 999px; width: 34px; height: 34px; font-size: 1.2rem; cursor: pointer; box-shadow: 0 10px 18px rgba(217,140,168,0.16); }
+    .order-panel { background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(255,244,250,0.95)); border: 1px solid rgba(239, 182, 208, 0.35); border-radius: 28px; padding: 22px; box-shadow: var(--shadow); }
+    .order-panel h3 { margin-top: 0; }
+    .cart-summary { display: grid; gap: 10px; margin-top: 14px; }
+    .cart-summary p { margin: 0; color: #5d4b58; }
+    .note-box { width: 100%; min-height: 84px; border: 1px solid #e8d3de; border-radius: 18px; padding: 14px; font-size: 0.98rem; color: var(--ink); resize: vertical; }
+    .order-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+    .whatsapp-btn { background: #25d366; color: white; border: none; border-radius: 999px; padding: 14px 18px; font-weight: 800; cursor: pointer; box-shadow: 0 12px 24px rgba(37, 211, 102, 0.26); }
+    .whatsapp-btn:hover { transform: translateY(-1px); }
+    .note-label { font-size: 0.95rem; color: #5d4b58; margin-bottom: 8px; display: block; }
+    .contact-box { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: stretch; margin-top: 18px; }
+    .contact-card { background: linear-gradient(135deg, #fff, #fff6fb); border: 1px solid #f2dbe4; border-radius: 24px; padding: 18px; box-shadow: var(--shadow); }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+    .stat-card { background: linear-gradient(135deg, #fff, #fff9fd); border: 1px solid #efdbe5; border-radius: 22px; padding: 14px; box-shadow: var(--shadow); }
+    .stat-card strong { display: block; font-size: 1.1rem; color: #7a4357; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .tag { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 999px; background: #fff7fb; border: 1px solid #efdbe5; color: #5b4651; font-size: 0.92rem; }
+    footer { text-align: center; color: #705866; font-size: 0.95rem; padding: 18px 16px 40px; }
+    @media (max-width: 1080px) { .hero { grid-template-columns: 1fr; } .contact-box { grid-template-columns: 1fr; } .feature-grid, .card-grid, .stats-grid, .shop-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 760px) { nav { align-items: flex-start; flex-direction: column; } .nav-links { width: 100%; gap: 10px; justify-content: space-between; } .nav-links a { flex: 1 1 auto; text-align: center; padding: 6px 0; border-radius: 10px; background: rgba(255,255,255,0.7); } main { padding: 18px 14px 40px; } .feature-grid, .card-grid, .stats-grid, .shop-grid { grid-template-columns: 1fr; } .cta-row { flex-direction: column; align-items: stretch; } .btn { width: 100%; } h1 { font-size: 2.35rem; } .lead { font-size: 1rem; } .section-header { align-items: flex-start; } }
+    @media (max-width: 420px) { .brand { font-size: 1rem; letter-spacing: .08em; } .brand-logo { width: 52px; height: 52px; border-radius: 50%; } .hero-card, .card, .contact-card, .stat-card { border-radius: 18px; } .mini-pill { font-size: 0.88rem; } }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <nav>
+        <a class="brand" href="#top">
+          <img class="brand-logo" src="./logo-bellas-artes.jpeg" alt="Logo Bellas's Artes" />
+          <span>Bellas's Artes</span>
+        </a>
+        <div class="nav-links">
+          <a href="#produtos">Produtos</a>
+          <a href="#pedir">Comprar</a>
+          <a href="#destaques">Destaques</a>
+          <a href="#pedidos">Pedidos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Papelaria com muito carinho</span>
+          <h1>Bellas's Artes</h1>
+          <p class="lead">Uma papelaria fofinha e acolhedora, feita para deixar seus dias mais bonitos, com cadernos, adesivos, caixas, topos de bolos personalizados e coisinhas de festa cheias de amor.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#produtos">Ver coleção</a>
+            <a class="btn btn-secondary" href="#contato">Fazer pedido</a>
+          </div>
+          <div class="feature-grid">
+            <article class="card"><h3>Itens personalizados</h3><p>Caixas, marcadores, topos de bolo e detalhes de festa com estilo único para presentear com cuidado.</p></article>
+            <article class="card"><h3>Design delicado</h3><p>Cores suaves, estampas encantadoras e acabamento que transmitem delicadeza.</p></article>
+            <article class="card"><h3>Atmosfera acolhedora</h3><p>Uma experiência de papelaria que mistura criatividade, carinho e bom gosto.</p></article>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="mini-pill">✨ Coleção fofinha</div>
+          <h2 style="font-size:1.4rem; margin: 10px 0 8px;">Um cantinho doce para escrever, decorar e presentear</h2>
+          <p style="color:#5d4b58;">Do caderno da rotina à embalagem da surpresa, tudo é pensado com carinho, cor e um toque super aconchegante.</p>
+          <div class="card-grid">
+            <article class="product-card"><span class="emoji">📓</span><h3 style="margin:6px 0; font-size:1rem;">Cadernos</h3><p>Para listas, ideias e momentos especiais.</p></article>
+            <article class="product-card"><span class="emoji">💌</span><h3 style="margin:6px 0; font-size:1rem;">Cartões</h3><p>Mensagem com charme e toque pessoal.</p></article>
+            <article class="product-card"><span class="emoji">🎁</span><h3 style="margin:6px 0; font-size:1rem;">Presentes</h3><p>Caixinhas e embalagens com delicadeza.</p></article>
+          </div>
+        </aside>
+      </section>
+      <section id="produtos" class="section"><div class="section-header"><div><h2>Produtos que encantam</h2><p>Uma seleção de itens para decorar sua rotina, festas e momentos especiais com muito carinho.</p></div><span class="mini-pill">Feito com carinho</span></div><div class="card-grid"><article class="card"><h3>Cadernos fofos</h3><p>Com capas delicadas, folhas de qualidade e estilo leve para escrever com prazer.</p></article><article class="card"><h3>Topos de bolo</h3><p>Personalizados para deixar a festa ainda mais especial e cheia de identidade.</p></article><article class="card"><h3>Detalhes para festa</h3><p>Adesivos, tags, caixas e embalagens com carinho para cada momento festivo.</p></article></div></section>
+      <section id="pedir" class="section"><div class="section-header"><div><h2>Painel de compras</h2><p>Escolha o que deseja comprar e envie o pedido direto para o WhatsApp da loja.</p></div><span class="mini-pill">🎁 Pedido rápido</span></div>
+        <div class="shop-grid">
+          <article class="shop-card" data-name="Caderno Fofinho" data-price="35">
+            <h3>📓 Caderno Fofinho</h3>
+            <p>Capa delicada, 80 páginas para escrever com amor.</p>
+            <div class="qty-group"><button type="button" class="qty-btn" data-action="decrease">−</button><input type="number" min="0" value="0" class="qty-input" /><button type="button" class="qty-btn" data-action="increase">+</button></div>
+          </article>
+          <article class="shop-card" data-name="Topo de Bolo" data-price="48">
+            <h3>🎂 Topo de Bolo</h3>
+            <p>Personalizado para sua festa com tema e nomes.</p>
+            <div class="qty-group"><button type="button" class="qty-btn" data-action="decrease">−</button><input type="number" min="0" value="0" class="qty-input" /><button type="button" class="qty-btn" data-action="increase">+</button></div>
+          </article>
+          <article class="shop-card" data-name="Caixa Presente" data-price="42">
+            <h3>🎁 Caixa Presente</h3>
+            <p>Caixa delicada para um presente especial.</p>
+            <div class="qty-group"><button type="button" class="qty-btn" data-action="decrease">−</button><input type="number" min="0" value="0" class="qty-input" /><button type="button" class="qty-btn" data-action="increase">+</button></div>
+          </article>
+          <article class="shop-card" data-name="Adesivo Tema" data-price="12">
+            <h3>✨ Adesivo Tema</h3>
+            <p>Adesivo artesanal para decorar lembrancinhas ou cadernos.</p>
+            <div class="qty-group"><button type="button" class="qty-btn" data-action="decrease">−</button><input type="number" min="0" value="0" class="qty-input" /><button type="button" class="qty-btn" data-action="increase">+</button></div>
+          </article>
+        </div>
+        <aside class="order-panel">
+          <h3>Resumo do pedido</h3>
+          <div class="cart-summary">
+            <p id="cart-items">Items selecionados: 0</p>
+            <p id="cart-total">Total estimado: R$ 0,00</p>
+          </div>
+          <label class="note-label" for="order-note">Observações</label>
+          <textarea id="order-note" class="note-box" placeholder="Escreva tema, nome, cores ou detalhes extras..."></textarea>
+          <div class="order-actions">
+            <button type="button" class="whatsapp-btn" id="send-whatsapp">Enviar pedido por WhatsApp</button>
+          </div>
+        </aside>
+      </section>
+      <section id="destaques" class="section"><div class="section-header"><div><h2>Destaques da loja</h2><p>Um pouco do que torna a Bellas's Artes especial: carinho, personalidade e muitos detalhes encantadores.</p></div><span class="mini-pill">💗 Feito com amor</span></div><div class="stats-grid"><article class="stat-card"><strong>Personalização</strong><p>Topos de bolo, tags, caixas e itens com nome, tema e cores escolhidos por você.</p></article><article class="stat-card"><strong>Festas e comemorações</strong><p>Decoração, lembrancinhas e detalhes que deixam cada celebração mais bonita.</p></article><article class="stat-card"><strong>Papelaria acolhedora</strong><p>Cadernos, cartões e presentes com um toque doce, leve e encantador.</p></article></div><div class="tag-list"><span class="tag">✨ Festa infantil</span><span class="tag">🎂 Topos personalizados</span><span class="tag">💌 Presentes especiais</span><span class="tag">📓 Papelaria delicada</span><span class="tag">🧁 Decoração charmosa</span></div></section>
+      <section id="sobre" class="section"><div class="section-header"><div><h2>Por que Bellas's Artes?</h2><p>Porque a papelaria pode ser mais do que útil: pode ser acolhedora, bonita e emocional.</p></div></div><div class="card-grid"><article class="card"><h3>Creatividade</h3><p>Combina cores, texturas e ideias para criar peças cheias de personalidade.</p></article><article class="card"><h3>Afeto</h3><p>Cada item é pensado para transmitir cuidado e fazer alguém se sentir especial.</p></article><article class="card"><h3>Identidade</h3><p>Um visual encantador para quem ama papelaria com estilo e coração.</p></article></div></section>
+      <section id="pedidos" class="section"><div class="section-header"><div><h2>Faça seu pedido</h2><p>Escolha seus itens, diga o tema e deixe tudo personalizado com carinho.</p></div><span class="mini-pill">📦 Pedido especial</span></div><div class="contact-box"><article class="contact-card"><h3 style="margin-top:0;">Como fazer</h3><p>Me conte o que você deseja: caderno, topo de bolo, detalhes para festa ou outro item personalizado.</p><p>Você pode enviar tema, cores, nome e data para eu montar uma proposta especial.</p></article><article class="contact-card"><h3 style="margin-top:0;">Pedido personalizado</h3><p>✨ Ideais para festas, presentes, lembrancinhas e decoração.</p><p>💌 Depois eu te respondo com mais informações e formas de entrega.</p><a class="btn btn-primary" href="#contato" style="margin-top: 6px;">Falar com a loja</a></article></div></section>
+      <section id="contato" class="section"><div class="section-header"><div><h2>Vamos criar algo lindo juntos?</h2><p>Fale conosco para pedidos, sugestões ou presentes personalizados.</p></div></div><div class="contact-box"><article class="contact-card"><h3 style="margin-top:0;">Como funciona</h3><p>Você pode escolher itens prontos ou pedir uma personalização especial para festas, presentes e comemorações.</p><p class="highlight">Bellas's Artes — papelaria criativa e afetiva.</p></article><article class="contact-card"><h3 style="margin-top:0;">Contato</h3><p>📍 Atendemos com carinho e atenção aos detalhes.</p><p>📩 Envie uma mensagem para montar sua coleção favorita.</p><p>🛍️ Ideal para presentes, organização e decoração pessoal.</p></article></div></section>
+    </main>
+    <footer>© 2026 Bellas's Artes — Papelaria criativa e afetiva.</footer>
+  </div>
+  <script>
+    const storePhone = '5581985498464'; // substitua pelo número real da loja, sem espaços nem sinais
+    const formatCurrency = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const shopCards = Array.from(document.querySelectorAll('.shop-card'));
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const noteField = document.getElementById('order-note');
+
+    function updateCart() {
+      let total = 0;
+      let itemCount = 0;
+      shopCards.forEach(card => {
+        const quantity = Number(card.querySelector('.qty-input').value) || 0;
+        const price = Number(card.dataset.price) || 0;
+        total += quantity * price;
+        itemCount += quantity;
+      });
+      cartItems.textContent = `Items selecionados: ${itemCount}`;
+      cartTotal.textContent = `Total estimado: ${formatCurrency(total)}`;
+    }
+
+    function changeQuantity(button) {
+      const card = button.closest('.shop-card');
+      const input = card.querySelector('.qty-input');
+      const currentValue = Number(input.value) || 0;
+      const nextValue = button.dataset.action === 'decrease' ? Math.max(currentValue - 1, 0) : currentValue + 1;
+      input.value = nextValue;
+      updateCart();
+    }
+
+    document.querySelectorAll('.qty-btn').forEach(btn => {
+      btn.addEventListener('click', () => changeQuantity(btn));
+    });
+
+    document.querySelectorAll('.qty-input').forEach(input => {
+      input.addEventListener('input', () => {
+        input.value = Math.max(0, Math.floor(Number(input.value) || 0));
+        updateCart();
+      });
+    });
+
+    document.getElementById('send-whatsapp').addEventListener('click', () => {
+      const items = shopCards.map(card => {
+        const quantity = Number(card.querySelector('.qty-input').value) || 0;
+        return quantity > 0 ? `${quantity}x ${card.dataset.name} (R$ ${card.dataset.price})` : null;
+      }).filter(Boolean);
+
+      if (!items.length) {
+        alert('Escolha pelo menos um item para enviar o pedido.');
+        return;
+      }
+
+      const note = noteField.value.trim();
+      const messageLines = [
+        'Olá, gostaria de fazer um pedido na Bellas\'s Artes:',
+        ...items.map(item => `- ${item}`),
+        note ? `Observações: ${note}` : '',
+        'Obrigado!'
+      ].filter(Boolean);
+
+      const text = encodeURIComponent(messageLines.join('\n'));
+      const whatsappUrl = `https://wa.me/${storePhone}?text=${text}`;
+      window.location.href = whatsappUrl;
+    });
+
+    updateCart();
+  </script>
+</body>
+</html>
