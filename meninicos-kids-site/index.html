@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeniNicos Kids | Moda Kids</title>
+  <meta name="description" content="MeniNicos Kids é uma loja de moda infantil com roupas coloridas, confortáveis e cheias de estilo para crianças." />
+  <style>
+    :root {
+      --bg: #fff8f4;
+      --card: #fff;
+      --accent: #ff9db3;
+      --accent-2: #84d6ff;
+      --text: #42303c;
+      --muted: #7d6b79;
+      --shadow: 0 16px 36px rgba(109, 61, 90, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: "Segoe UI", "Trebuchet MS", sans-serif; background: radial-gradient(circle at top left, #fff9f2 0 22%, transparent 22%), linear-gradient(180deg, var(--bg) 0%, #fdf7ff 100%); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+    .page { max-width: 1180px; margin: 0 auto; padding: 24px 20px 40px; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.2rem; }
+    .brand-mark { width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg, #ffcbef, #ffc8a5); display: grid; place-items: center; font-size: 1.2rem; color:#7e3d5a; }
+    nav { display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-end; font-size: 0.98rem; }
+    nav a { padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,0.75); border: 1px solid rgba(130, 84, 108,0.12); }
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 26px; align-items: center; padding: 14px 0 28px; }
+    .eyebrow { display:inline-flex; padding:9px 14px; border-radius:999px; background:#ffe9f4; color:#9e4b70; font-size:.92rem; font-weight:800; }
+    h1 { font-size: clamp(2.5rem, 7vw, 4.2rem); line-height:1.05; margin:14px 0 12px; }
+    .lead { max-width: 560px; color: var(--muted); font-size:1.03rem; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:14px 18px; font-weight:800; transition:.2s ease; border:1px solid transparent; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #fdd9a5); color:#5e3043; }
+    .btn-secondary { background:#fff; color: var(--text); border-color: rgba(146, 88, 114, 0.16); }
+    .hero-card { background: linear-gradient(180deg, #fff, #fff7fb); border:1px solid rgba(156, 95, 120, 0.16); border-radius: 28px; padding: 24px; box-shadow: var(--shadow); }
+    .product-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px; }
+    .card { background: var(--card); border-radius: 24px; padding: 18px; box-shadow: var(--shadow); border:1px solid rgba(186, 145, 166, 0.18); }
+    .card h3 { margin: 0 0 10px; font-size:1.05rem; }
+    .shop-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:18px; margin-top:24px; }
+    .shop-card { background: linear-gradient(180deg, #fff, #fff9f8); border:1px solid rgba(255, 157, 179, 0.2); border-radius: 24px; padding: 18px; box-shadow: var(--shadow); }
+    .shop-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .qty-group { display: flex; align-items: center; gap:10px; margin-top:12px; }
+    .qty-group input { width: 60px; border:1px solid #efced9; border-radius: 14px; padding: 10px; text-align:center; background:#fff; }
+    .qty-btn { width: 34px; height:34px; border:none; border-radius:50%; background:#ffbfd2; color:#6f3b51; cursor:pointer; font-size:1.2rem; }
+    .order-panel { background: linear-gradient(145deg, #fff, #fff7f4); border:1px solid rgba(255, 169, 194,0.25); border-radius:28px; padding:22px; box-shadow: var(--shadow); }
+    .order-panel h3 { margin-top:0; }
+    .cart-summary { display:grid; gap:10px; margin-top:14px; }
+    .note-box { width:100%; min-height:84px; border:1px solid #efced9; border-radius:18px; padding:14px; resize:vertical; }
+    .order-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; }
+    .whatsapp-btn { background:#ff8aba; color:#fff; border:none; border-radius:999px; padding:14px 18px; font-weight:800; cursor:pointer; box-shadow: 0 12px 30px rgba(255,133,167,0.18); }
+    footer { text-align:center; color:#8e6f84; margin-top:40px; font-size:.95rem; }
+    @media (max-width: 980px) { .hero { grid-template-columns:1fr; } .shop-grid { grid-template-columns:1fr; } .product-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width: 620px) { nav { justify-content:center; } .product-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="#top"><span class="brand-mark">MK</span><span>MeniNicos Kids</span></a>
+      <nav>
+        <a href="#colecao">Coleção</a>
+        <a href="#novidades">Novidades</a>
+        <a href="#pedir">Pedir</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="top">
+      <div>
+        <span class="eyebrow">Moda Kids cheia de encanto</span>
+        <h1>MeniNicos Kids</h1>
+        <p class="lead">Loja de roupas infantis com peças divertidas, coloridas e confortáveis para brincar, passear e brilhar todo dia.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;">
+          <a class="btn btn-primary" href="#colecao">Ver coleção</a>
+          <a class="btn btn-secondary" href="#contato">Falar com a loja</a>
+        </div>
+        <div class="product-grid">
+          <div class="card"><h3>Vestidos fofos</h3><p>Peças leves, estampas cheias de alegria e acabamento delicado para meninas.</p></div>
+          <div class="card"><h3>Looks confortáveis</h3><p>Camisetas, calças e conjuntos práticos para brincar com movimento livre.</p></div>
+          <div class="card"><h3>Acessórios</h3><p>Faixas, tiaras e detalhes que deixam o visual ainda mais especial.</p></div>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h2>Bem-vindo ao marketplace MeniNicos</h2>
+        <p>Selecione o que desejar e envie o pedido direto para o WhatsApp. Facilita sua compra com estilo infantil e atendimento personalizado.</p>
+      </aside>
+    </section>
+
+    <section id="colecao" style="margin-top:34px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap;">
+        <div><h2>Coleção infantil</h2><p style="margin:8px 0 0; color:var(--muted);">Peças pensadas para o universo das crianças: cores, estampas divertidas e conforto.</p></div>
+        <span class="eyebrow">Moda Kids</span>
+      </div>
+      <div class="shop-grid">
+        <article class="shop-card" data-name="Vestido Estrela" data-price="79">
+          <h3>🌟 Vestido Estrela</h3>
+          <p>Vestido com print de estrelas e tecido supermacio.</p>
+          <div class="qty-group"><button type="button" class="qty-btn" data-action="decrease">−</button><input type="number" min="0" value="0" class="qty-input" /><button type="button" class="qty-btn" data-action="increase">+</button></div>
+        </article>
+        <article class="shop-card" data-name="Conjunto Dino" data-price="89">
+          <h3>🦕 Conjunto Dino</h3>
+          <p>Camiseta e short com estampa de dinossauro, ideal para aventuras.</p>
+          <div class="qty-group"><button type="button" class="qty-btn" data-action="decrease">−</button><input type="number" min="0" value="0" class="qty-input" /><button type="button" class="qty-btn" data-action="increase">+</button></div>
+        </article>
+        <article class="shop-card" data-name="Camiseta Sereia" data-price="45">
+          <h3>🧜‍♀️ Camiseta Sereia</h3>
+          <p>Camiseta leve com vibe marítima e brilho suave.</p>
+          <div class="qty-group"><button type="button" class="qty-btn" data-action="decrease">−</button><input type="number" min="0" value="0" class="qty-input" /><button type="button" class="qty-btn" data-action="increase">+</button></div>
+        </article>
+        <article class="shop-card" data-name="Moletom Bichinhos" data-price="98">
+          <h3>🐻 Moletom Bichinhos</h3>
+          <p>Moletom quentinho com detalhes fofos para os dias mais frescos.</p>
+          <div class="qty-group"><button type="button" class="qty-btn" data-action="decrease">−</button><input type="number" min="0" value="0" class="qty-input" /><button type="button" class="qty-btn" data-action="increase">+</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pedir" style="margin-top:36px; display:grid; grid-template-columns:1fr .92fr; gap:24px; align-items:start;">
+      <aside class="order-panel">
+        <h3>Seu pedido</h3>
+        <div class="cart-summary"><p id="cart-items">Itens selecionados: 0</p><p id="cart-total">Total estimado: R$ 0,00</p></div>
+        <label style="display:block; margin-top:18px; color:var(--muted);">Observações</label>
+        <textarea id="order-note" class="note-box" placeholder="Escreva tamanho, cor, bordado ou tema desejado..."></textarea>
+        <div class="order-actions"><button type="button" class="whatsapp-btn" id="send-whatsapp">Enviar pedido por WhatsApp</button></div>
+      </aside>
+      <div style="background: linear-gradient(145deg, #fff, #fff4ff); border:1px solid rgba(255, 157, 179, 0.25); border-radius:28px; padding:22px; box-shadow: var(--shadow);">
+        <h3>Como funciona</h3>
+        <p style="color:var(--muted);">1. Escolha as peças e quantidade.</p>
+        <p style="color:var(--muted);">2. Adicione detalhes do pedido no campo de observações.</p>
+        <p style="color:var(--muted);">3. Envie direto pelo WhatsApp para finalizar a compra.</p>
+      </div>
+    </section>
+
+    <section id="contato" style="margin-top:36px;">
+      <div style="display:flex; flex-wrap:wrap; gap:18px;">
+        <div style="flex:1; min-width:240px; background:var(--card); border-radius:24px; padding:20px; box-shadow:var(--shadow); border:1px solid rgba(186,145,166,0.18);">
+          <h3>Contato</h3>
+          <p>WhatsApp da loja, orçamento personalizado e informações sobre entrega.</p>
+          <p style="margin:12px 0 0; font-weight:700;">+55 81 98549-8464</p>
+        </div>
+        <div style="flex:1; min-width:240px; background:var(--card); border-radius:24px; padding:20px; box-shadow:var(--shadow); border:1px solid rgba(186,145,166,0.18);">
+          <h3>Entrega</h3>
+          <p>Envios para todo o Brasil por correios ou retirada local com horário combinado.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 MeniNicos Kids — Moda Kids para crianças.</footer>
+  </div>
+  <script>
+    const storePhone = '5581985498464';
+    const formatCurrency = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const shopCards = Array.from(document.querySelectorAll('.shop-card'));
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const noteField = document.getElementById('order-note');
+
+    function updateCart() {
+      let total = 0;
+      let itemCount = 0;
+      shopCards.forEach(card => {
+        const quantity = Number(card.querySelector('.qty-input').value) || 0;
+        const price = Number(card.dataset.price) || 0;
+        total += quantity * price;
+        itemCount += quantity;
+      });
+      cartItems.textContent = `Itens selecionados: ${itemCount}`;
+      cartTotal.textContent = `Total estimado: ${formatCurrency(total)}`;
+    }
+
+    function changeQuantity(button) {
+      const card = button.closest('.shop-card');
+      const input = card.querySelector('.qty-input');
+      const currentValue = Number(input.value) || 0;
+      const nextValue = button.dataset.action === 'decrease' ? Math.max(currentValue - 1, 0) : currentValue + 1;
+      input.value = nextValue;
+      updateCart();
+    }
+
+    document.querySelectorAll('.qty-btn').forEach(btn => btn.addEventListener('click', () => changeQuantity(btn)));
+    document.querySelectorAll('.qty-input').forEach(input => input.addEventListener('input', () => {
+      input.value = Math.max(0, Math.floor(Number(input.value) || 0));
+      updateCart();
+    }));
+
+    document.getElementById('send-whatsapp').addEventListener('click', () => {
+      const items = shopCards.map(card => {
+        const quantity = Number(card.querySelector('.qty-input').value) || 0;
+        return quantity > 0 ? `${quantity}x ${card.dataset.name} (R$ ${card.dataset.price})` : null;
+      }).filter(Boolean);
+      if (!items.length) {
+        alert('Escolha pelo menos um item para enviar o pedido.');
+        return;
+      }
+      const note = noteField.value.trim();
+      const messageLines = [
+        'Olá, gostaria de fazer um pedido na MeniNicos Kids:',
+        ...items.map(item => `- ${item}`),
+        note ? `Observações: ${note}` : '',
+        'Obrigado!'
+      ].filter(Boolean);
+      const text = encodeURIComponent(messageLines.join('\n'));
+      const whatsappUrl = `https://wa.me/${storePhone}?text=${text}`;
+      window.location.href = whatsappUrl;
+    });
+
+    updateCart();
+  </script>
+</body>
+</html>
