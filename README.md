@@ -10,6 +10,11 @@ Site estático da papelaria Bellas's Artes, criado para apresentação da marca,
 ## Publicação
 O site está configurado para funcionar com GitHub Pages a partir do arquivo `index.html` na raiz do repositório.
 
+### URL publicada
+O site já está disponível em:
+
+https://tinholins5-glitch.github.io/bellas-artes/
+
 ### Como colocar o site no ar
 1. Crie um repositório no GitHub.
 2. Faça `git init`, `git add .`, `git commit -m "Site Bellas's Artes"` e `git remote add origin <URL_DO_REPO>`.

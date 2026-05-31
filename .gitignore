@@ -1,1 +1,14 @@
-Bellas's Artes/
+# Sistema operacional
+Thumbs.db
+ehthumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
